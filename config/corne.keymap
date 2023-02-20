@@ -37,6 +37,7 @@
                             &kp LWIN  &mo LOWER  &kp SPACE    &kp BKSP  &mo RAISE  &kp RALT
                         >;
                 };
+
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  F1 |  F2 |  F3  |  F4  |  F5  |   |  F6  |  HOME  |  END   |  -  |  =   |  DEL |
@@ -44,10 +45,10 @@
 // | SHFT |     |     |      |      |      |   |      |  LEFT  |  DWN | RIGHT |  \   |  ENT |
 //                    | WIN  |      |  SPC |   | ENT  | ADJUST | ALT |
                         bindings = <
-   &trans   &kp F1  &kp F2  kp F3   &kp F4    &kp F5       &kp F6   &kp HOME    &kp END   &kp MINUS  &kp EQUAL  &kp DEL
-   &trans   &kp F7  &kp F8  kp F9   &kp F10   &kp F11      &kp F12  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
-   &trans   &none   &none   &none   &none     &none        &none    &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
-                            &trans  &trans    &kp SPACE    &trans   &mo ADJUST  &trans
+   &trans   &kp F1  &kp F2  kp F3   &kp F4   &kp F5       &kp F6   &kp HOME    &kp END   &kp MINUS  &kp EQUAL  &kp DEL
+   &trans   &kp F7  &kp F8  kp F9   &kp F10  &kp F11      &kp F12  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
+   &trans   &none   &none   &none   &none    &none        &none    &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
+                            &trans  &trans   &kp SPACE    &trans   &mo ADJUST  &trans
                         >;
                 };
 
@@ -58,20 +59,20 @@
 // | SHFT | BRI_UP | BRI_DN |      |        | BT_CLR |   | BT 1  | BT 2 | BT 3 | BT 4 | BT 5 |  ~   |
 //                          | GUI  | ADJUST |  SPC   |   | ENT   |      | ALT  |
                         bindings = <
-   &kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5         &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp BSPC
-   &trans     &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none       &kp K_CMENU    &kp PSCRN     &none         &none         &kp MINUS     &kp EQUAL     &none
-   &trans     &kp C_BRI_UP  &kp C_BRI_DN  &none       &none       &bt BT_CLR     &none         &none         &none         &none         &none         &trans
-                    	                  &trans      &mo ADJUST  &kp SPACE      &trans        &trans        &trans
+   &kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5         &kp N6     &kp N7  &kp N8  &kp N9     &kp N0     &kp BSPC
+   &trans     &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none       &kp K_CMENU    &kp PSCRN  &none   &none   &kp MINUS  &kp EQUAL  &none
+   &trans     &kp C_BRI_UP  &kp C_BRI_DN  &none       &none       &none          &none      &none   &none   &none      &none      &trans
+                    	                  &trans      &mo ADJUST  &kp SPACE      &trans     &trans  &trans
                         >;
                 };
 
                 adjust_layer {
-                                              bindings = <
-   &kp GRAVE  &kp N1  &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
-   &trans     BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   &none   &none   &none   &none
-   &trans     &none   &none         &none         &none         &none         &none         &none   &none   &none   &none   &trans
-                                    &trans        &mo ADJUST    &kp SPACE     &trans        &trans  &trans
+                        bindings = <
+   &kp GRAVE  &kp N1      &kp N2        &kp N3        &kp N4        &kp N5          &kp N6        &kp N7  &kp N8  &kp N9  &kp N0  &kp BSPC
+   &trans     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &none   &none   &none   &none   &none
+   &trans     &none       &none         &none         &none         &none           &none         &none   &none   &none   &none   &trans
+                                        &trans        &trans        &kp SPACE       &trans        &trans  &trans
                         >;  
-                }
+                };
         };
 };
