@@ -45,10 +45,10 @@
 // | SHFT |     |     |      |      |      |   |      |  LEFT  |  DWN | RIGHT |  \   |  ENT |
 //                    | WIN  |      |  SPC |   | ENT  | ADJUST | ALT |
                         bindings = <
-   &trans   &kp F1  &kp F2  kp F3   &kp F4   &kp F5       &kp F6   &kp HOME    &kp END   &kp MINUS  &kp EQUAL  &kp DEL
-   &trans   &kp F7  &kp F8  kp F9   &kp F10  &kp F11      &kp F12  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
-   &trans   &none   &none   &none   &none    &none        &none    &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
-                            &trans  &trans   &kp SPACE    &trans   &mo ADJUST  &trans
+   &trans   &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &kp F6   &kp HOME    &kp END   &kp MINUS  &kp EQUAL  &kp DEL
+   &trans   &kp F7  &kp F8  &kp F9   &kp F10  &kp F11      &kp F12  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
+   &trans   &none   &none   &none    &none    &none        &none    &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
+                            &trans   &trans   &kp SPACE    &trans   &mo ADJUST  &trans
                         >;
                 };
 
