@@ -26,52 +26,57 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y   |  U   |  I  |  O  |  P  | ESC  |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H   |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N   |  M   |  ,  |  .  |  /  | ENT  |
-//                    | WIN |     | SPC |   | BKSP | RSE  | ALT |
+// |  TAB   |  Q    |  W   |  E      |  R      |  T       |   |  Y      |  U       |  I      |  O     |  P      | DEL    |
+// | SHFT   |  A    |  S   |  D      |  F      |  G       |   |  H      |  J       |  K      |  L     |  ;      |  '     |
+// | LCTRL  |  Z    |  X   |  C      |  V      |  B       |   |  N      |  M       |  ,      |  .     |  /      | ENT    |
+//                         | WIN     | LOW     | SPC      |   | BKSP    | RSE      |  \      |
                         bindings = <
-   &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y     &kp U      &kp I      &kp O    &kp P     &kp ESC
-   &kp LSHFT  &kp A  &kp S  &kp D     &kp F      &kp G        &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-   &kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
-                            &kp LWIN  &mo LOWER  &kp SPACE    &kp BSPC  &mo RAISE  &kp RALT
+   &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp T         &kp Y     &kp U      &kp I      &kp O    &kp P     &kp DEL
+   &kp LSHFT  &kp A  &kp S  &kp D     &kp F      &kp G         &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+   &kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp B         &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RET
+                            &kp LWIN  &mo LOWER  &kp SPACE     &kp BSPC  &mo RAISE  &kp BSLH
                         >;
                 };
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  F1 |  F2 |  F3  |  F4  |  F5  |   |  F6  |  HOME  |  END   |  -  |  =   |  DEL |
-// | CTRL |  F7 |  F8 |  F9  |  F10 |  F11 |   |  F12 | PG_UP  |  UP  | PG_DN |  [   |   ]  |
-// | SHFT |     |     |      |      |      |   |      |  LEFT  |  DWN | RIGHT |  \   |  ENT |
-//                    | WIN  |      |  SPC |   | ENT  | ADJUST | ALT |
+// | TAB     |  F1   |  F2    |  F3    |  F4    |        |   |         |           |         |  -       |  =       |  DEL   |
+// | SHIFT   |  F5   |  F6    |  F7    |  F8    |        |   | END     |  PG_UP    |  UP     | PG_DN    |  [       |   ]    |
+// | ESC     |  F9   |  F10   |  F11   |  F12   |        |   | HOME    |  LEFT     |  DWN    | RIGHT    |  \       |  ENT   |
+//                            |  WIN   |        |  LALT  |   | BKSP    |  ADJUST   |  \      |
                         bindings = <
-   &trans   &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &kp F6   &kp HOME    &kp END   &kp MINUS  &kp EQUAL  &kp DEL
-   &trans   &kp F7  &kp F8  &kp F9   &kp F10  &kp F11      &kp F12  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
-   &trans   &none   &none   &none    &none    &none        &none    &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
-                            &trans   &trans   &kp SPACE    &trans   &mo ADJUST  &trans
+   &kp TAB    &kp F1  &kp F2   &kp F3   &kp F4   &none        &none     &none       &none     &kp MINUS  &kp EQUAL  &trans
+   &kp LSHFT  &kp F5  &kp F6   &kp F7   &kp F8   &none        &kp END   &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
+   &kp ESC    &kp F9  &kp F10  &kp F11  &kp F12  &none        &kp HOME  &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
+                               &trans   &trans   &kp LALT     &trans    &mo ADJUST  &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  `   |  1     |  2     |   3  |  4     |   5    |   |   6   |   7  |  8   |  9   |  0   | BKSP |
-// | CTRL | VOL_UP | VOL_DN | MUTE |        | CMENU  |   | PSCRN |      |      |      |  [   |  ]   |
-// | SHFT | BRI_UP | BRI_DN |      |        | BT_CLR |   | BT 1  | BT 2 | BT 3 | BT 4 | BT 5 |  ~   |
-//                          | GUI  | ADJUST |  SPC   |   | ENT   |      | ALT  |
+// | TAB     |  1          |  2          |   3       |  4        |   5       |   |   6      |   7   |  8    |  9       |  0       |  DEL  |
+// | SHFT    | VOL_UP      | VOL_DN      | MUTE      |           | CMENU     |   | PSCRN    |       |       |  -       |  =       |       |
+// | LCTRL   | BRI_UP      | BRI_DN      |           |           |           |   |          |       |       |          |          |  ENT  |
+//                                       | GUI       | ADJUST    |  SPC      |   | ENT      |       | \     |
                         bindings = <
-   &kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5         &kp N6     &kp N7  &kp N8  &kp N9     &kp N0     &kp DEL
-   &trans     &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none       &kp K_CMENU    &kp PSCRN  &none   &none   &kp MINUS  &kp EQUAL  &none
-   &trans     &kp C_BRI_UP  &kp C_BRI_DN  &none       &none       &none          &none      &none   &none   &none      &none      &trans
-                    	                  &trans      &mo ADJUST  &kp SPACE      &trans     &trans  &trans
+   &trans     &kp N1        &kp N2        &kp N3      &kp N4      &kp N5          &kp N6     &kp N7  &kp N8  &kp N9     &kp N0     &trans
+   &trans     &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none       &kp K_CMENU     &kp PSCRN  &none   &none   &kp MINUS  &kp EQUAL  &none
+   &trans     &kp C_BRI_UP  &kp C_BRI_DN  &none       &none       &none           &none      &none   &none   &none      &none      &trans
+                    	                  &trans      &mo ADJUST  &trans          &trans     &trans  &trans
                         >;
                 };
 
                 adjust_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB     |  1        |  2          |   3         |  4          |   5   |   |   6   |   7   |  8    |  9    |  0    |  DEL  |
+// | SHFT    | BT_CLR    | BT 0        | BT 1        | BT 2        |       |   |       |       |       |  -    |  =    |       |
+// | LCTRL   |           | BT 3        | BT 4        |             |       |   |       |       |       |       |       |  ENT  |
+//                                     | GUI         |             | SPC   |   | ENT   |       | \     |
                         bindings = <
-   &kp GRAVE  &kp N1      &kp N2        &kp N3        &kp N4        &kp N5          &kp N6        &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
-   &trans     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &none   &none   &none   &none   &none
-   &trans     &none       &none         &none         &none         &none           &none         &none   &none   &none   &none   &trans
-                                        &trans        &trans        &kp SPACE       &trans        &trans  &trans
+   &trans     &kp N1      &kp N2        &kp N3        &kp N4        &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
+   &trans     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none       &none   &none   &none   &none   &none   &none
+   &trans     &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none       &none   &none   &none   &none   &none   &trans
+                                        &trans        &trans        &trans      &trans  &trans  &trans
                         >;  
                 };
         };
