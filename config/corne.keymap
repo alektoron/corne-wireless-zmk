@@ -46,8 +46,8 @@
 //                            |  WIN   |        |  LALT  |   | BKSP    |  ADJUST   |  \      |
                         bindings = <
    &kp ESC    &kp F1  &kp F2   &kp F3   &kp F4   &none        &none     &none       &none     &none      &none      &trans
-   &kp trans  &kp F5  &kp F6   &kp F7   &kp F8   &none        &kp HOME  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
-   &kp trans  &kp F9  &kp F10  &kp F11  &kp F12  &none        &kp END   &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
+   &trans     &kp F5  &kp F6   &kp F7   &kp F8   &none        &kp HOME  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
+   &trans     &kp F9  &kp F10  &kp F11  &kp F12  &none        &kp END   &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
                                &trans   &trans   &kp LALT     &trans    &mo ADJUST  &trans
                         >;
                 };
