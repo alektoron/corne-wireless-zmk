@@ -41,28 +41,28 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC     |  F1   |  F2    |  F3    |  F4    |        |   |         |           |         |          |          |  DEL   |
-// | TAB     |  F5   |  F6    |  F7    |  F8    |        |   | HOME    |  PG_UP    |  UP     | PG_DN    |  [       |   ]    |
+// | SHIFT   |  F5   |  F6    |  F7    |  F8    |        |   | HOME    |  PG_UP    |  UP     | PG_DN    |  [       |   ]    |
 // | LCTRL   |  F9   |  F10   |  F11   |  F12   |        |   | END     |  LEFT     |  DWN    | RIGHT    |  \       |  ENT   |
-//                            |  WIN   |        |  LALT  |   | BKSP    |  ADJUST   |  \      |
+//                            |  WIN   |        |  SPC   |   | BKSP    |  ADJUST   |  \      |
                         bindings = <
    &kp ESC    &kp F1  &kp F2   &kp F3   &kp F4   &none        &none     &none       &none     &none      &none      &trans
-   &kp TAB    &kp F5  &kp F6   &kp F7   &kp F8   &none        &kp HOME  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
+   &trans     &kp F5  &kp F6   &kp F7   &kp F8   &none        &kp HOME  &kp PG_UP   &kp UP    &kp PG_DN  &kp LBKT   &kp RBKT
    &trans     &kp F9  &kp F10  &kp F11  &kp F12  &none        &kp END   &kp LEFT    &kp DOWN  &kp RIGHT  &kp BSLH   &trans
-                               &trans   &trans   &kp LALT     &trans    &mo ADJUST  &trans
+                               &trans   &trans   &trans       &trans    &mo ADJUST  &trans
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | `       |  1          |  2          |   3       |  4        |   5       |   |   6       |   7        |  8        |  9       |  0       |  DEL  |
-// | SHFT    |  BRI_UP     | VOL_UP      | MUTE      |           | CMENU     |   | PSCRN     |            |           |  -       |  =       |       |
+// | TAB     |  BRI_UP     | VOL_UP      | MUTE      |           | CMENU     |   | PSCRN     |            |           |  -       |  =       |       |
 // | LCTRL   |  BRI_DN     | VOL_DN      |           |           |           |   |           |            |           |          |          |  ENT  |
-//                                       | GUI       | ADJUST    |  SPC      |   | ENT       |            | \         |
+//                                       | GUI       | ADJUST    |  ALT      |   | BKSP      |            | MENU      |
                         bindings = <
    &kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5          &kp N6      &kp N7       &kp N8      &kp N9     &kp N0     &trans
-   &trans     &kp C_BRI_UP  &kp C_VOL_UP  &kp C_MUTE  &none       &none           &kp PSCRN   &none        &none       &kp MINUS  &kp EQUAL  &none
+   &kp TAB    &kp C_BRI_UP  &kp C_VOL_UP  &kp C_MUTE  &none       &none           &kp PSCRN   &none        &none       &kp MINUS  &kp EQUAL  &none
    &trans     &kp C_BRI_DN  &kp C_VOL_DN  &none       &none       &none           &none       &none        &none       &none      &none      &trans
-                    	                  &trans      &mo ADJUST  &trans          &trans      &trans       &kp K_CMENU
+                    	                  &trans      &mo ADJUST  &kp LALT        &trans      &trans       &kp K_CMENU
                         >;
                 };
 
