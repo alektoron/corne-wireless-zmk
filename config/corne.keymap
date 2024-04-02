@@ -17,8 +17,8 @@
         conditional_layers {
                 compatible = "zmk,conditional-layers";
                 tri_layer {
-                        if-layers = <LOWER RAISE>;
-                        then-layer = <ADJUST>;
+                        if-layers = <1 2>;
+                        then-layer = <3>;
                 };
         };
         keymap {
@@ -54,13 +54,13 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | `       |  1          |  2          |   3       |  4        |   5       |   |   6       |   7        |  8        |  9       |  0       |  DEL  |
-// | TAB     |  BRI_UP     | VOL_UP      | MUTE      |           | CMENU     |   | PSCRN     |            |           |  -       |  =       |       |
+// | TAB     |  1          |  2          |   3       |  4        |   5       |   |   6       |   7        |  8        |  9       |  0       |  DEL  |
+// | SHFT    |  BRI_UP     | VOL_UP      | MUTE      |           |           |   | PSCRN     |            |           |  -       |  =       |       |
 // | LCTRL   |  BRI_DN     | VOL_DN      |           |           |           |   |           |            |           |          |          |  ENT  |
 //                                       | GUI       | ADJUST    |  ALT      |   | BKSP      |            | MENU      |
                         bindings = <
    &kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4      &kp N5          &kp N6      &kp N7       &kp N8      &kp N9     &kp N0     &trans
-   &kp TAB    &kp C_BRI_UP  &kp C_VOL_UP  &kp C_MUTE  &none       &none           &kp PSCRN   &none        &none       &kp MINUS  &kp EQUAL  &none
+   &kp LSHFT  &kp C_BRI_UP  &kp C_VOL_UP  &kp C_MUTE  &none       &none           &kp PSCRN   &none        &none       &kp MINUS  &kp EQUAL  &none
    &trans     &kp C_BRI_DN  &kp C_VOL_DN  &none       &none       &none           &none       &none        &none       &none      &none      &trans
                     	                  &trans      &mo ADJUST  &kp LALT        &trans      &trans       &kp K_CMENU
                         >;
@@ -68,12 +68,12 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB     |  1        |  2          |   3         |  4          |   5   |   |   6   |   7   |  8    |  9    |  0    |  DEL  |
-// | SHFT    | BT_CLR    | BT 0        | BT 1        | BT 2        |       |   |       |       |       |  -    |  =    |       |
+// | `       |  1        |  2          |   3         |  4          |   5   |   |   6   |   7   |  8    |  9    |  0    |  DEL  |
+// | SHFT    | BT_CLR    | BT 0        | BT 1        | BT 2        |       |   |       |       |       |       |       |       |
 // | LCTRL   |           | BT 3        | BT 4        |             |       |   |       |       |       |       |       |  ENT  |
 //                                     | GUI         |             | SPC   |   | ENT   |       | \     |
                         bindings = <
-   &trans     &kp N1      &kp N2        &kp N3        &kp N4        &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
+   &kp GRAVE  &kp N1      &kp N2        &kp N3        &kp N4        &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
    &trans     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none       &none   &none   &none   &none   &none   &none
    &trans     &none       &bt BT_SEL 3  &bt BT_SEL 4  &none         &none       &none   &none   &none   &none   &none   &trans
                                         &trans        &trans        &trans      &trans  &trans  &trans
